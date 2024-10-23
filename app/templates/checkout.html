@@ -1,0 +1,25 @@
+{% extends "base-secondary.html" %}
+
+{% block content %}
+
+<div class="checkout-container">
+    <div class="checkout-section">
+        <form method="POST" action="{{ url_for('checkoutPage') }}">
+            {{ checkout_form.csrf_token }}
+            <div class="credit-card-details">
+                {{ checkout_form.card_number.label }}
+                {{ checkout_form.card_number(class="form-control", placeholder="Enter card number") }}
+                {{ checkout_form.expiry_date.label }}
+                {{ checkout_form.expiry_date(class="form-control", placeholder="MM/YY") }}
+                {{ checkout_form.cvv.label }}
+                {{ checkout_form.cvv(class="form-control", placeholder="CVV") }}
+            </div>
+            <div class="total-amount">
+                <p>Total: ${{ total }}</p>
+            </div>
+            <button type="submit" class="purchase-button">Purchase</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

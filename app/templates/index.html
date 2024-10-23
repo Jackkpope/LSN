@@ -1,0 +1,37 @@
+{% extends "base-main.html" %}
+
+{% block content %}
+
+    <div class="main-menu-container">
+        <form method="POST" action="{{ url_for('galleryPage') }}">
+            {{ sort_form.hidden_tag() }}
+            <div class="sort-options">
+                {{ sort_form.sort_by.label }} 
+                {{ sort_form.sort_by(class="form-control", onchange="this.form.submit()") }}
+            </div>
+        </form>
+
+        <div class="menu-product-container">
+            {% for product in products %}
+                <div class="menu-product">
+                    <a href="/product/{{ product.id }}">
+                        <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+                    </a>
+                    <div class="details">  
+                        <a href="/product/{{ product.id }}">
+                            <h1>{{ product.name }}</h1>
+                            <p>${{ product.price }}</p>
+                            <p>Environmental Impact: {{ product.envimpact }} / 5</p>
+                        </a>
+                        <form method="POST" action="{{ url_for('singleProductPage', product_id=product.id) }}">
+                            {{ form.hidden_tag() }} 
+                            <input type="hidden" name="quantity" value="1">
+                            <button type="submit">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,473 @@
+@font-face {
+    font-family: Speeday;
+    src: url("../fonts/Speeday-Bold-FFP.ttf");
+  }
+@font-face {
+    font-family: Next;
+    src: url("../fonts/TheNextFont.ttf");
+}
+@font-face {
+    font-family: Sublima;
+    src: url("../fonts/Sublima-ExtraBold.otf");
+}
+@font-face {
+    font-family: Plateia;
+    src: url("../fonts/Plateia\ Bold.ttf");
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 10px 0px 0px 0px;
+}
+
+button{
+    background-color: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-header {
+    height: 400px;
+    position: relative;
+    background-image: url("../banner.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.secondary-header{
+    height: 70px;
+    position: relative;
+    background-image: url("../banner.jpg");
+    background-size: cover;
+    background-position: top;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer{
+    height: 75px;
+    width: 100%;
+    background-color: white;
+    font-size: 12px;
+    font-family: Sublima;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo span {
+    margin: 0px 50px;
+    padding: 0px;
+    font-size: 50px;
+    font-family: Speeday;
+    color: white;
+    text-shadow: 2px 2px #2fb1d1, 4px 4px #f50d9c;
+    transition-duration: 0.25s;
+}
+
+.logo span:hover {
+    text-shadow: 3px 3px #2fb1d1, 6px 6px #f50d9c;
+    cursor: pointer;
+}
+
+
+.navbuts{
+    margin: 0;
+    padding: 10px 50px 0px 0px;
+}
+  
+.navbuts span {
+    margin: 0px 30px;
+    color: #ffffff;
+    font-family: Plateia;
+    font-size: 22px;
+    text-shadow: 1px 1px #2fb1d1, 2px 2px #f50d9c;
+    transition-duration: 0.25s;
+}
+
+.navbuts span:hover {
+    text-shadow: 1.5px 1.5px #2fb1d1, 3px 3px #f50d9c;
+    cursor: pointer;
+}
+
+.banner{
+    height: 400px;
+    width: auto;
+    background-image: url("../banner.jpg");
+    background-size: cover; 
+    background-position: center;
+}
+
+/*---------------------------------------------------------*/
+
+.main-menu-container{
+    padding: 25px 0px;
+    font-family: Next;
+    border-top: 4px solid #ddd;
+    border-bottom: 4px solid #ddd ;
+    background-color: #b4b4b4;
+}
+
+.sort-options {
+    display: flex;
+    padding: 0px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-options label {
+    margin-right: 10px;
+}
+
+.sort-options select {
+    padding: 5px;
+    font-family: Next;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-product-container {
+    padding: 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #b4b4b4;
+}
+
+.menu-product {
+    width: 22%;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 4px solid #ddd;
+    text-align: center;
+}
+
+.menu-product img {
+    max-width: 50%;
+    height: auto;
+}
+
+.menu-product .details {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.menu-product .details h1 {
+    margin: 0;
+    padding: 0;
+    color: #3b3b3b;
+    font-size: 24px;
+}
+
+.menu-product button {
+    margin: 20px 0px 0px 0px;
+    background-color: #464646;
+    color: #ffffff;
+    border: none;
+    box-shadow: 2px 2px #ffffff;
+    font-family: Next;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.menu-product button:hover {
+    background-color: #2fb1d1;
+    color: #ffffff;
+}
+
+/*---------------------------------------------------------------*/
+
+.product-container {
+    padding: 40px 0px 0px 0px;
+    font-family: Sublima;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    align-items: center;
+}
+
+.product-image {
+    margin-right: 20px;
+}
+
+.product-image img {
+    max-width: 500px;
+    height: auto;
+}
+
+.product-details {
+    max-width: 400px;
+    margin: 0px 40px 0px 0px;
+}
+
+.product-details p{
+    font-family: Sublima;
+    font-size: 12px;
+}
+
+.add-to-cart {
+    margin-top: 20px;
+}
+
+.add-to-cart label {
+    margin-right: 10px;
+}
+
+.add-to-cart input{
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart button{
+    margin-left: 10px;
+    background-color: #464646;
+    color: #ffffff;
+    border: none;
+    box-shadow: 2px 2px #ffffff;
+    font-family: Next;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.add-to-cart button:hover{
+    background-color: #2fb1d1;
+    color: #ffffff;
+}
+
+
+.menu-product button:hover {
+    background-color: #2fb1d1;
+    color: #ffffff;
+}
+
+/*--------------------------------------------------------*/
+
+.basket-container {
+    font-family: Sublima;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.basket-container h1{
+    color: #3b3b3b;
+    display: flex;
+    justify-content: center;
+}
+
+.basket-container p2{
+    font-size: 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.basket-container p3{
+    font-size: 14px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.basket-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basket-item span{
+    margin-right: 15px;
+    width: 50px;
+    text-align: right;
+}
+
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.item-name {
+    margin-left: 10px;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 80px;
+}
+
+.quantity-container .adjust{
+    background-color: #464646;
+    color: #fff;
+    border: none;
+    border-radius: 50%; 
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.quantity-container .adjust:hover {
+    background-color: #2fb1d1;
+}
+
+.quantity-container .clear{
+    margin-left: 20px;
+    background-color: #970707;
+    color: #fff;
+    border: none;
+    border-radius: 50%; 
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.quantity-container .clear:hover {
+    background-color: #ff0000;
+}
+
+.quantity {
+    width: 40px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity p{
+    padding: 0px;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    margin: 20px 0px 0px 0px;
+    background-color: #464646;
+    color: #ffffff;
+    border: none;
+    box-shadow: 2px 2px #ffffff;
+    font-family: Next;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.checkout-button:hover {
+    background-color: #2fb1d1;
+}
+
+/*--------------------------------------------------------*/
+
+.checkout-container {
+    font-family: Sublima;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.checkout-section {
+    border-radius: 8px;
+}
+
+.checkout-section h1 {
+    color: #3b3b3b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.credit-card-details {
+    margin-bottom: 20px;
+}
+
+.credit-card-details label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.credit-card-details input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.total-amount {
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.purchase-button {
+    margin: 20px 0px 0px 0px;
+    background-color: #464646;
+    color: #ffffff;
+    border: none;
+    box-shadow: 2px 2px #ffffff;
+    font-family: Next;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 8px 16px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.purchase-button:hover {
+    background-color: #2fb1d1;
+}

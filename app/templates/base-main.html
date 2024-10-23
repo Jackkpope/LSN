@@ -1,0 +1,27 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>LSN</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="/"><span>LSN.</span></a>
+        </div>
+        <div class="navbuts">
+            <a href="/"><span>home</span></a>
+            <a href="/basket"><span>basket</span></a>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        <p>&copy; 2024 LSN. All rights reserved.</p>
+    </footer>
+</body>
+</html>

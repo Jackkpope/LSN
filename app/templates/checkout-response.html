@@ -1,0 +1,18 @@
+{% extends "base-secondary.html" %}
+
+{% block content %}
+
+    <div class="basket-container">
+                  
+        {% if successful %}
+
+        <p3>Payment Successful</p3>
+
+        {% else %}
+
+        <p3>Payment Unsuccessful</p3>
+        
+        {% endif %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base-secondary.html" %}
+
+{% block content %}
+
+    <div class="basket-container">
+
+        {% if products|length == 0 %}
+        <p2>YOUR BASKET IS EMPTY</p2>
+        <p3>add an item and it will appear here</p3>
+
+        {% else %}
+
+        <h1>BASKET</h1>
+        
+        {% for i in range(products|length) %}
+
+        <div class="basket-item">
+
+            <div class="item-details">
+                <img class="item-image" src="{{ url_for('static', filename=products[i].image) }}" alt="{{ products[i].name }}">
+                <span class="item-name">{{ products[i].name }}</span>
+            </div>
+
+            <div class="quantity-container">
+                <form action="/decrement/{{ products[i].id }}" method="post">
+                    <button class="adjust" type="submit">-</button>
+                </form>
+                <div class="quantity">
+                    <p>{{ quantities[i] }}</p>
+                </div>
+                <form action="/increment/{{ products[i].id }}" method="post">
+                    <button class="adjust" type="submit">+</button>
+                </form>
+
+                <form action="/clear/{{ products[i].id }}" method="post">
+                    <button class="clear" type="submit">X</button>
+                </form>
+            </div>
+
+            <span>${{ (products[i].price * quantities[i]|int)|round(2) }}</span>
+        </div>
+        {% endfor %}
+
+        <div class="total">
+            <p>Total: ${{total}}</p>
+        </div>
+
+        <div class="total" style="text-align: right;">
+            <a href="/checkout"><button class="checkout-button">Checkout</button></a>
+        </div>
+
+        {% endif %}
+
+    </div>
+
+{% endblock %}
